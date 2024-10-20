@@ -11,9 +11,32 @@ frequency: 1
 
 <FocusProblem problem="sample" />
 
-<FocusProblem problem="sample2" />
+<Resources>
+	<Resource
+		source="cp-algo"
+		title="HLD"
+		url="https://cp-algorithms.com/graph/hld.html"
+		starred
+	>
+		For an alternate implementation, see below
+	</Resource>
+	<Resource
+		source="CF"
+		title="galen_colin - HLD"
+		url="https://codeforces.com/blog/entry/81317"
+	>
+		blog + video for USACO Cowland. Binary jumping isn't necessary though.
+	</Resource>
+</Resources>
 
-## Tutorial
+<Optional title="Tree Queries in O(NQ)">
+
+[This](https://codeforces.com/blog/entry/82211?#comment-691472) is why you don't
+set problems where $\Theta(Q\sqrt N\log N)$ is intended ...
+
+</Optional>
+
+## Introduction
 
 Suppose that you want to support the following operations on a tree:
 
@@ -83,6 +106,36 @@ Here's an animation of how the algorithm works:
 <video width="960" height="720" controls>
 	<source src="/animations/hld.mp4" type="video/mp4"/>
 </video>
+
+
+
+## Implementation
+
+<Resources>
+	<Resource
+		source="CF"
+		title="AI-Cash - HLD Implementation"
+		url="22072"
+		starred
+	/>
+	<Resource
+		source="CF"
+		title="adamant - Easiest HLD with subtree queries"
+		url="53170"
+		starred
+	>
+		not complete
+	</Resource>
+	<Resource
+		source="Benq"
+		title="Complete HLD Implementation"
+		url="https://github.com/bqi343/USACO/blob/master/Implementations/content/graphs%20(12)/Trees%20(10)/HLD%20(10.3).h"
+		starred
+	>
+		complete implementation following the above two articles with minor
+		modifications
+	</Resource>
+</Resources>
 
 We can solve the focus problem "Path Queries II" using Heavy Light
 Decomposition:
@@ -198,61 +251,6 @@ int main() {
 </CPPSection>
 
 </LanguageSection>
-
-<Resources>
-	<Resource
-		source="cp-algo"
-		title="HLD"
-		url="https://cp-algorithms.com/graph/hld.html"
-		starred
-	>
-		For an alternate implementation, see below
-	</Resource>
-	<Resource
-		source="CF"
-		title="galen_colin - HLD"
-		url="https://codeforces.com/blog/entry/81317"
-	>
-		blog + video for USACO Cowland. Binary jumping isn't necessary though.
-	</Resource>
-</Resources>
-
-<Optional title="Tree Queries in O(NQ)">
-
-[This](https://codeforces.com/blog/entry/82211?#comment-691472) is why you don't
-set problems where $\Theta(Q\sqrt N\log N)$ is intended ...
-
-</Optional>
-
-## Implementations
-
-<Resources>
-	<Resource
-		source="CF"
-		title="AI-Cash - HLD Implementation"
-		url="22072"
-		starred
-	/>
-	<Resource
-		source="CF"
-		title="adamant - Easiest HLD with subtree queries"
-		url="53170"
-		starred
-	>
-		not complete
-	</Resource>
-	<Resource
-		source="Benq"
-		title="Complete HLD Implementation"
-		url="https://github.com/bqi343/USACO/blob/master/Implementations/content/graphs%20(12)/Trees%20(10)/HLD%20(10.3).h"
-		starred
-	>
-		complete implementation following the above two articles with minor
-		modifications
-	</Resource>
-</Resources>
-
-<IncompleteSection />
 
 ## Problems
 
